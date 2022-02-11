@@ -5,7 +5,7 @@ class Sample1_06_2 {
 		
 		//『 += 』
 		int number0 = 10 ;
-		number0 += 3 ;
+		number0 += 3 ; //変数に＋３した値を代入する
 		System.out.println("number0：" + number0);
 		
 		//『 変数x += 3 』は『 変数x = 変数x + 3 』と同じ意味
@@ -35,7 +35,7 @@ class Sample1_06_2 {
 		
 		//『 += 』（文字の結合）
 		String stNumber6 = "10" ;
-		stNumber6 += "3" ;
+		stNumber6 += 3 ;
 		System.out.println("stNumber6：" + stNumber6);
 		
 	}

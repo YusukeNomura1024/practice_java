@@ -26,6 +26,7 @@ class Sample1_06_1 {
 		System.out.println("answer4：" + answer4);
 		
 		//『 / 』（割り切れない場合）
+		//　/スラッシュはたとえdouble型に代入しても小数点以下は切り捨てになる？
 		int answer5 = numberX / numberZ ;
 		System.out.println("answer5：" + answer5);
 		
@@ -41,13 +42,20 @@ class Sample1_06_1 {
 		int answer8 = numberX++ ;
 		System.out.println("answer8：" + answer8);
 		System.out.println("（ numberX：" + numberX + " ）");
+		System.out.println("（ numberX：" + numberX + " ）");
+		//　変数++の場合は初回の代入時は変数がそのまま入る
+		// ２回目以降に変数を呼び出すと、＋１された値になる
 		
 		//『 ++○ 』
 		int answer9 = ++numberY ;
 		System.out.println("answer9：" + answer9);
 		System.out.println("（ numberY：" + numberY + " ）");
+		//変数を代入した時点で+1された値が入る、
+		//２回目以降に変数を呼び出しても、代入時と同じ＋１された値になる
 		
 		//『 +1 』と『 ++ 』の使い分けの注意
+		//＋１を使う場合は、変数に変更はされないが、
+		//++を使用すると変数自体が変更されてしまう
 		int answer10 = numberZ + 1 ;
 		System.out.println("answer10：" + answer10);
 		System.out.println("（ numberZ：" + numberZ + " ）");
