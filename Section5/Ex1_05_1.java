@@ -11,17 +11,14 @@
 --------------------------------------------------------------------------------------*/
 class Ex1_05_1 {
 	public static void main (String[] args) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		int itIndustryLifetimeWage = 276000000;
+    long itIndustryMarketSize = 12400000000000L;
+    char favoriteKanji = '無';
+    String wantToBeOccupation = "プログラマー";
+    boolean isPreviousGraduate = true;
+    //boolean型はよくisで始まる変数名にする
+
+    //思いやりのあるソースコードは変数だけでは意味が分かりにくいので、
+    //コメントも付けるようにするとよい
 	}
 }
