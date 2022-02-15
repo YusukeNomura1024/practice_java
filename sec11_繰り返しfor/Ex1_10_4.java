@@ -28,9 +28,10 @@ class Ex1_10_4 {
 		*/
 		String display = "";
 		for(int i = 0; i < animals.length; i++){
-			display = "";
+			
+			display = animals[i][0];
 			for(int j = 0; j < animals[i].length; j++){
-				display = display + animals[i][j] + " / ";
+				display = display + " / " + animals[i][j];
 			}
 			System.out.println(display) ;
 		}

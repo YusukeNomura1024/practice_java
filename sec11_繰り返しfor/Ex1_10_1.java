@@ -18,7 +18,7 @@ class Ex1_10_1 {
 		**※必ずfor文を使用してください。
 		*/
 		for(int i = 0; i < receiveNumber; i++){
-			display = display + "＊";
+			display += "＊";
 		}
 		
 		
