@@ -30,7 +30,7 @@ class Ex1_10_4 {
 		for(int i = 0; i < animals.length; i++){
 			
 			display = animals[i][0];
-			for(int j = 0; j < animals[i].length; j++){
+			for(int j = 1; j < animals[i].length; j++){
 				display = display + " / " + animals[i][j];
 			}
 			System.out.println(display) ;
