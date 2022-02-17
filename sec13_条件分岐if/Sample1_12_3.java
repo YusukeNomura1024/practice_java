@@ -13,6 +13,10 @@ class Sample1_12_3 {
 			
 			System.out.println("「未成年の方にお酒は売れません」");
 			
+		}else if( customerAge > 80 ){
+			
+			System.out.println("「そろそろお酒を控えたほうがよいのではないですか？」");
+			
 		}else{
 			
 			System.out.println("「お会計220円になります」");
