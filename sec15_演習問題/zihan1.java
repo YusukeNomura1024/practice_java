@@ -3,7 +3,7 @@ public class zihan1 {
     final String ERRMESSAGE_1 =        "「警告：１円玉は使えません。」"; //メッセージ（A型）
     final String ERRMESSAGE_5 =        "「警告：５円玉は使えません。」"; //メッセージ（B型）
     final String ERRMESSAGE_DEFAULT =        "「警告：入力された値は効果として適切ではありません。」"; //メッセージ（O型）
-
+    int coinNum = args.length; //投入された硬貨の枚数
     int totalCountMoney = 0;
     for(int i = 0; i < args.length; i++){
       int entryMoney = Integer.parseInt(args[i]);
