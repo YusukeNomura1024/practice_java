@@ -10,15 +10,15 @@ class Sample1_14_1 {
 		
 		//メソッドのしくみ
 		
-		int print = sum( 2 , 3 ) ;
+		int print = sum( 2 , 3, 4 ) ;
 		
 		System.out.println("print：" + print);
 		
 	}
 	
-	static int sum( int num1 , int num2 ) {
+	static int sum( int num1 , int num2, int num3 ) {
 		
-		int calcResult = num1 + num2 ;
+		int calcResult = num1 + num2 + num3 ;
 		
 		return calcResult ;
 		
