@@ -33,9 +33,9 @@ public class Ex1_14_2 {
 	**  - 税込価格は整数（小数点以下切り捨て）で返す
 	*/
 	static int calcTaxPayment( int discountedPrice ){        //アンダーバーを適切な内容に書き換えてください
-		double fix = 1.08;
-		int fixedDiscountedPrice = (int)(discountedPrice * fix);
-		return fixedDiscountedPrice;
+		final double TAX = 1.08;
+		int taxPayment = (int)(discountedPrice * TAX);
+		return taxPayment;
 	}
 	
 	
@@ -46,8 +46,26 @@ public class Ex1_14_2 {
 	**  - 値引き額は小数点以下切り捨てで計算する（キャストを使いましょう）
 	**  - 割引金額の上限は5000円とする
 	*/
-	static ______ discount( __________________ ){            //アンダーバーを適切な内容に書き換えてください
-		
-		
+	static int discount( int totalPrice ){            //アンダーバーを適切な内容に書き換えてください
+		final int DISCOUNT_APPLYING_PRICE1 = 1000; //割引が適用される金額
+    	final double DISCOUNT_RATE1 = 0.9;         //割引率
+		final int DISCOUNT_APPLYING_PRICE2 = 5000; //割引が適用される金額
+    	final double DISCOUNT_RATE2 = 0.8;         //割引率
+		final int MAX_DISCOUNT = 5000;
+		int discountTotalPrice = 0;
+		int discountPrice = 0;
+		if( totalPrice > DISCOUNT_APPLYING_PRICE2 ){
+			discountPrice = (int)(totalPrice * DISCOUNT_RATE2); //値引き金額が20％
+			
+		} else if(totalPrice > DISCOUNT_APPLYING_PRICE1){
+			discountPrice = (int)(totalPrice * DISCOUNT_RATE1); //値引き金額が10％
+
+		} else{
+			discountPrice = totalPrice;
+		}
+		if(totalPrice - discountPrice > MAX_DISCOUNT){
+			discountPrice = totalPrice - 5000;
+		}
+		return discountPrice;
 	}
 }
