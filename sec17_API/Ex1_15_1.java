@@ -26,6 +26,11 @@ class Ex1_15_1{
 		// XXX ÷ YYYをして小数第2位で表示（小数第3位以下は切り捨て）
 		// XXX.divide(YYY, 2, RoundingMode.DOWN);
 		
+		BigDecimal d = new BigDecimal("3");
+		BigDecimal answer2 = a.multiply(b).add(c.divide(d, 4, RoundingMode.HALF_UP));
+		System.out.println(a.multiply(b));
+		System.out.println(c.divide(d, 4, RoundingMode.HALF_UP));
+		System.out.println(answer2);
 		
 		
 		
