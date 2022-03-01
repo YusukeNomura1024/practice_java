@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.List;//utilのArrayListクラスを使うときは、utilのListクラスも一緒にインポートしないといけない
 import java.util.ArrayList;
 
 class Sample1_15_3{
@@ -27,3 +27,16 @@ class Sample1_15_3{
 		
 	}
 }
+
+//　isEmpty()はリストに要素がない場合はtrueを返す
+
+//参照型しか扱えないので、プリミティブではないクラスを指定する
+//Boolean ＜　boolean
+//Character < char
+//Byte < byte
+//Short < short
+//Integer < int
+//Long < long
+//Float < float
+//Double < double
+//それぞれの参照用のクラスの参照先にプリミティクラスがあると思っておこう
