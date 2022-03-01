@@ -1,6 +1,8 @@
 /*-< 演習：Ex1_15_2 >---------------------------------
 コメントに従って2次元配列からデータを抽出して画面に表示するプログラムを作ってください。
 ----------------------------------------------------*/
+import java.util.List;
+import java.util.ArrayList;
 class Ex1_15_2{
 	public static void main (String[] args) {
 		
@@ -24,13 +26,26 @@ class Ex1_15_2{
 		                  };
 		
 		/*以下のプログラムを作成してください。
-		**  ①Sring型を扱うArrayList「adultFemaleDogsList」を作成する
-		**  ②2次元配列dogsから以下の条件にあてはまる名前を抽出し、すべてadultFemaleDogsListに格納する
+		**  ①Sring型を扱うArrayList「adultFemaleDogsList」を作成する*/
+		List<String> adultFemaleDogsList = new ArrayList<String>();
+		/**  ②2次元配列dogsから以下の条件にあてはまる名前を抽出し、すべてadultFemaleDogsListに格納する
 		**     - 4歳以上
 		**     - メス
 		**    ※ヒント：年齢の文字列から「歳」を除去する方法について調べてみよう！
 		**  ③adultFemaleDogsListに格納されているすべてのデータをprintlnで表示する
 		*/
+		final int OLD_BORDER = 4;
+		final String filter_sex = "メス";
+		for(int i = 0; i < dogs.length; i++){
+			int old_num = Integer.parseInt(dogs[i][1].replace("歳", "")); 
+			String sex = dogs[i][2];
+			if( old_num >= OLD_BORDER && sex == filter_sex ){
+				adultFemaleDogsList.add(dogs[i][0]);
+			}
+		}
+		for(int i = 0; i < adultFemaleDogsList.size(); i++){
+			System.out.println(adultFemaleDogsList.get(i));
+		}
 		
 		
 	}
