@@ -36,10 +36,11 @@ class Ex1_15_2{
 		*/
 		final int OLD_BORDER = 4;
 		final String filter_sex = "メス";
+		final String REMOVE_CHAR_SAI = "歳";
 		for(int i = 0; i < dogs.length; i++){
-			int old_num = Integer.parseInt(dogs[i][1].replace("歳", "")); 
+			int old_num = Integer.parseInt(dogs[i][1].replace(REMOVE_CHAR_SAI, "")); 
 			String sex = dogs[i][2];
-			if( old_num >= OLD_BORDER && sex == filter_sex ){
+			if( old_num >= OLD_BORDER && sex.equals(filter_sex) ){
 				adultFemaleDogsList.add(dogs[i][0]);
 			}
 		}
