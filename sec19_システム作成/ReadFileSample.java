@@ -17,7 +17,7 @@ public class ReadFileSample {
 	public static void main(String[] args) {
 		
 		//  WorkingResult.csvのパス ※「C:\WorkSpace」直下に配置していない場合は適宜変更してください。
-		final String WORKING_RESULT_FILE_PATH = "C:\\WorkSpace\\WorkingResult.csv";
+		final String WORKING_RESULT_FILE_PATH = "C:\\Users\\yusuk\\Desktop\\back up\\plactice_java\\sec19_システム作成\\WorkingResult.csv";
 		// コンマ
 		final String COMMA = ","; 
 		
