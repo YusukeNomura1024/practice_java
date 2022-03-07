@@ -18,7 +18,7 @@ public class ReadFileSample {
 		
 		//  WorkingResult.csvのパス ※「C:\WorkSpace」直下に配置していない場合は適宜変更してください。
 		final String WORKING_RESULT_FILE_PATH = "C:\\Users\\yusuk\\Desktop\\back up\\plactice_java\\sec19_システム作成\\WorkingResult.csv";
-		// コンマ
+		// コンマを区切りとして設定をする
 		final String COMMA = ","; 
 		
 		// 計算用の数値を定数で用意
