@@ -3,7 +3,16 @@
 public class Example {
     public static void main(String[] args) {
         Outer outer = new Outer(); // クラスOuterをインスタンス化
-        Outer.Inner inner = outer.new Inner();
+        Outer.Inner inner = new Outer.Inner();
+        System.out.println(inner.hello());
+        System.out.println(Constants.Cat.NAME);
+        System.out.println(Constants.Cat.LEG_COUNT);
+        System.out.println(Constants.Octopus.NAME);
+        System.out.println(Constants.Octopus.LEG_COUNT);
+
+        Constants.Human human = new Constants.Human();
+        Constants.Human.HumanLeg leg = human.new HumanLeg();
+        System.out.println(leg.kick());
     }
 }
 //Outerは外部クラスのため、Outer outer = new Outer()でインスタンスかができる
