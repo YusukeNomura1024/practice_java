@@ -15,4 +15,38 @@ public static final String CAKE = "ケーキ";
 
 でも、列挙型だともっと楽にできます。
 
+public enum Dessert {
+    APPLE, ICE_CREAM, CAKE;
+}
+これで完成です。
 
+これは、Dessertクラスの定数が3つ宣言されたことになります。
+Dessert.APPLEとするとインスタンス化はできませんが、APPLEの情報を引き出せます。
+普通は定数を引き出すと定数に入っている内容が表示されますが、
+Dessert.APPLEとするとAPPLEがそのまま出てきます。つまり、定数の中身ではなく、
+定数そのものが引き出されることになります。
+
+では定数の中身をどうやって引き出すのかというと、
+Dessertクラスの中でコンストラクターで値の型を設定して、
+その値を呼び出すメソッドまで定義する必要があります。
+
+APPLE(100),ICE_CREAM(200), CAKE(300);
+とした場合、
+まずこのカッコ内の数字は何なのかを決める前に
+書く定数に持たせたい値を宣言します
+今回はpriceという値を持たせたいので、
+private int price;　として宣言をします。
+これからprice というintがたの値を設定しますよという意味ですね。
+
+で、次にカッコ内の値をどう処理するのかを記述します。
+private Dessert(int price){
+    this.price = price;
+}
+これはつまりDessert(int price)というのは
+APPLE(100)ならばこのカッコに入っている一つ目の値をint型として受け取り、コンストラクターメソッドの中では
+priceとして扱いますという意味ですね。
+このカッコ内のint price とコンストラクター内のthis.priceは別物です。
+this.priceはprivate int priceで定義したものを呼び出して、そのpriceの中にカッコ内に入っている値を代入していることになります。
+
+APPLEのpriceという値にカッコ内の100という数字を入れるということですね。
+これによって、APPLEにprice = 100 として設定されました。
