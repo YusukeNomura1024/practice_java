@@ -24,5 +24,5 @@ public class MapTest{
 
         System.out.println(map1.remove(2, "ねりけし"));
         System.out.println(map1.remove(2, "なし"));
-    }
+    } 
 }
