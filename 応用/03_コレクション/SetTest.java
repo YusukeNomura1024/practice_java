@@ -16,7 +16,7 @@ public class SetTest{
         System.out.println(set1.size());
 
         System.out.println(set1.remove("鉛筆"));
-        System.out.println(set1.remove("消しゴム"));
+        System.out.println(set1.remove("消しゴム")); 
 
     }
 }
