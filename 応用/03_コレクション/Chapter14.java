@@ -1,4 +1,3 @@
-package practice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +5,11 @@ import java.util.List;
 public class Chapter14 {
 
     public static void main(String[] args) {
-        List<Character> party = new ArrayList<Character>();
+        List<Character> party = new ArrayList<Character>(); //Character」インターフェースを実装したクラスだけが追加できる
+        //SoldierとPlayboyクラスはCharacterインターフェースを実装しているから代入ができる
         // プログラムを作成
+        party.add(new Soldier());
+        party.add(new Playboy());
 
         Chapter14.partyAttack(party);
     }
