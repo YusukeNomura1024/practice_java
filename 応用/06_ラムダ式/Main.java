@@ -21,5 +21,33 @@ public class Main{
 
         
         System.out.println(numbers);
+
+        Greeting greeting = (String word) -> {
+            System.out.println(word);
+            return word;
+        };
+        Greeting goodbye = (String word) -> {
+            System.out.println(word);
+            return word;
+        };
+
+        greeting.hello("こんにちは");
+        goodbye.hello("さようなら");
+        
+        sayHello(greeting);
+        //g.hello()を呼び出すだけで、こんにちはが出力される
+        //でさらにsayHelloメソッドでこんにちわが呼び出される
+        sayHello(goodbye);
+
+        // Kick lowKick = () -> {
+        //     return "ローキック";
+        // };
+        // actKick(lowKick);
    }
+   public static void sayHello(Greeting g){
+       System.out.println(g.hello("こんにちは"));
+   }
+//    public static void actKick(Kick k){
+//        System.out.println(k.kick());
+//    }
 }
