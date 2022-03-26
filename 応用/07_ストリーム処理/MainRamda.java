@@ -2,6 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 public class MainRamda {
     public static void main(String[] args){
@@ -25,6 +26,22 @@ public class MainRamda {
             .count();
 
         System.out.println(number);
+
+        //在庫数が１０個以下のフルーツの個数を返す
+        long tenUnderCount = fruits.stream()
+            .filter(f -> f.quantity <= 10)
+            .count();
+        
+        System.out.println(tenUnderCount);
+
+        List<String> sortedFruits = fruits.stream()
+            .sorted((f1, f2) -> f2.quantity - f1.quantity)
+            .map(f -> f.name + ": " + f.quantity + "個")
+            .collect(Collectors.toList());
+
+        System.out.println(sortedFruits);
+
+
 
         // List<Fruit> filtered = new ArrayList<>();
 
