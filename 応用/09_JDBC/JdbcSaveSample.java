@@ -27,7 +27,7 @@ public class JdbcSaveSample {
         PreparedStatement statement = connection.prepareStatement("insert into user (email, name) values (?, ?)")) {
 
       statement.setString(1, "aaa@aaa.aaa");
-      statement.setString(2, "山田太郎");
+      statement.setString(2, "taro");
       statement.execute();
 
       // try (ResultSet resultSet = statement.executeQuery()) {

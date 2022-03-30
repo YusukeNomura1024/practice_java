@@ -24,7 +24,7 @@ public class JdbcSelectSample {
 
     // Connection（データベースとの接続を表す）、PreparedStatement（発行するSQLを表す）を、それぞれ生成します。
     try (Connection connection = DriverManager.getConnection(URL);
-        PreparedStatement statement = connection.prepareStatement("select * from user where id = ?")) {
+        PreparedStatement statement = connection.prepareStatement("select * from user")) {
 
       // StatementにSQLを文字列で与えて実行します。
       // 戻り値は、SQLの実行結果を表す、ResultSet（結果セット）です。
@@ -41,7 +41,7 @@ public class JdbcSelectSample {
       // }
 
       // statement.executeQueryを実行する前にid=1で絞りこむ
-      statement.setLong(1, 1L);
+      // statement.setLong(1, 1L);
       try (ResultSet resultSet = statement.executeQuery()) {
 
         // SQLの実行結果はidが1だけを取り出している
