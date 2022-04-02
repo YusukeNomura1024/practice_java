@@ -50,7 +50,7 @@ public class JdbcAtoB {
         e2.printStackTrace();
       }
     } finally {
-      if (connection != null) {
+      if (connection != null) { // connetionがnullの時はcloseは不要である
         try {
           // オートコミット有効化
           connection.setAutoCommit(true);
