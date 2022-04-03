@@ -4,7 +4,8 @@
     "c:\\Users\\Yusuke Nomura\\Downloads\\mysql-connector-java-8.0.28\\mysql-connector-java-8.0.28\\mysql-connector-java-8.0.28.jar"
   ],
   "java.project.sourcePaths": [
+    "応用/09_JDBC",
     "応用/07_ストリーム処理",
-    "応用/09_JDBC"
+    "Object"
   ]
 }
