@@ -1,4 +1,10 @@
 class Ex2_02_2_Player {
+
+  //定数
+  final String HAND_G = "グー";
+  final String HAND_C = "チョキ";
+  final String HAND_P = "パー";
+
   String name;
   String handStatus;
 
@@ -7,8 +13,18 @@ class Ex2_02_2_Player {
   }
 
   void makeHandStatus() {
-    String[] st = { "グー", "チョキ", "パー" };
-    int num = (int) (Math.random() * (st.length));
-    this.handStatus = st[num];
+    int random1to3 = 1 + (int)(Math.random() * 3.0);
+
+    switch(random1to3){
+      case 1:
+        this.handStatus = HAND_G;
+        break;
+      case 2:
+        this.handStatus = HAND_C;
+        break;
+      case 3:
+        this.handStatus = HAND_P;
+        break;
+    }
   }
 }

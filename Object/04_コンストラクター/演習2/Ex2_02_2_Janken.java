@@ -11,7 +11,8 @@ class Ex2_02_2_Janken {
     PLAYER_1.makeHandStatus();
     PLAYER_2.makeHandStatus();
 
-    REFEREE.handStatusCall(PLAYER_1, PLAYER_2);
+    REFEREE.handStatusCall(PLAYER_1);
+    REFEREE.handStatusCall(PLAYER_2);
 
     REFEREE.judge(PLAYER_1, PLAYER_2);
   }

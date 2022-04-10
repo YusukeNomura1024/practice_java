@@ -1,52 +1,52 @@
 class Ex2_02_2_Referee {
+  //定数
+  final String HAND_G = "グー";
+  final String HAND_C = "チョキ";
+  final String HAND_P = "パー";
+
   String name;
-  String handStatus;
 
   Ex2_02_2_Referee(String nm) {
     this.name = nm;
   }
 
   void startCall() {
-    System.out.println("「じゃんけん・・・ぽん！！！！！」");
+    messageReferee("じゃんけん・・・ぽん！！！！！");
   }
 
-  void handStatusCall(Ex2_02_2_Player p1, Ex2_02_2_Player p2) {
-    System.out.println("審判" + this.name + "「" + p1.name + "さんの手は" + p1.handStatus + "でした！」");
-    System.out.println("審判" + this.name + "「" + p2.name + "さんの手は" + p2.handStatus + "でした！」");
-  }
-
-  void judge(Ex2_02_2_Player p1, Ex2_02_2_Player p2) {
-    System.out.println("審判" + this.name + "「結果は・・・」");
-    Ex2_02_2_Player winner = null;
-    if (p1.handStatus != p2.handStatus) {
-      if (p1.handStatus == "パー") {
-        if (p2.handStatus == "チョキ") {
-          winner = p2;
-        } else if (p2.handStatus == "グー") {
-          winner = p1;
-        }
-      }
-      if (p1.handStatus == "チョキ") {
-        if (p2.handStatus == "グー") {
-          winner = p2;
-        } else if (p2.handStatus == "パー") {
-          winner = p1;
-        }
-      }
-      if (p1.handStatus == "グー") {
-        if (p2.handStatus == "パー") {
-          winner = p2;
-        } else if (p2.handStatus == "チョキ") {
-          winner = p1;
-        }
-      }
-    }
-    if (winner == p1) {
-      System.out.println("審判" + this.name + "「" + p1.name + "さんの勝利」");
-    } else if (winner == p2) {
-      System.out.println("審判" + this.name + "「" + p2.name + "さんの勝利」");
+  void handStatusCall(Ex2_02_2_Player player) {
+    if( player.handStatus.equals(HAND_G) || player.handStatus.equals(HAND_C) || player.handStatus.equals(HAND_P)){
+      messageReferee(player.name + "さんの手は" + player.handStatus + "でした！");
     } else {
-      System.out.println("審判" + this.name + "「あいこ！勝負つかず」");
+      System.out.println("[error]ジャンケンの判定が不正です");
     }
+  }
+
+  void judge(Ex2_02_2_Player PLAYER_1, Ex2_02_2_Player PLAYER_2) {
+    messageReferee("結果は・・・");
+
+    if ((PLAYER_1.handStatus).equals(PLAYER_2.handStatus)) {
+      //文字列の比較はqualsを使う
+      //あいこの場合
+      messageReferee("あいこ！勝負つかず");
+
+    } else if( (PLAYER_1.handStatus.equals(HAND_G) && PLAYER_2.handStatus.equals(HAND_C)) 
+            || (PLAYER_1.handStatus.equals(HAND_C) && PLAYER_2.handStatus.equals(HAND_P))
+            || (PLAYER_1.handStatus.equals(HAND_P) && PLAYER_2.handStatus.equals(HAND_G)) ){
+      //プレイヤー１が勝利した場合
+      messageReferee(PLAYER_1.name + "さんの勝利");
+
+    } else if( (PLAYER_2.handStatus.equals(HAND_G) && PLAYER_1.handStatus.equals(HAND_C)) 
+            || (PLAYER_2.handStatus.equals(HAND_C) && PLAYER_1.handStatus.equals(HAND_P))
+            || (PLAYER_2.handStatus.equals(HAND_P) && PLAYER_1.handStatus.equals(HAND_G)) ){
+      //プレイヤー2が勝利した場合
+      messageReferee(PLAYER_2.name + "さんの勝利");
+    } else {
+      messageReferee("[error]ジャンケンの判定が不正です");
+    }
+  }
+
+  void messageReferee(String msg){
+    System.out.println( this.name + "「" + msg + "」" );
   }
 }
