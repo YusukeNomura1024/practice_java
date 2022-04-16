@@ -11,7 +11,7 @@ class Sample2_06_1_Dog {
 	//---コンストラクタ---------------------------------
 	Sample2_06_1_Dog(String br , String nm){
 		this.dogsNumber++ ;  //インスタンス化されるたびにdogsNumberの値を＋１する
-		this.breed = br ;
+		this.breed = br ; //犬種はインスタンスごとに設定すべきだが、この変数はクラス変数になっているため、インスタンス化の度に上書きされてしまう。
 		this.name  = nm ;
 	}
 	
