@@ -5,13 +5,13 @@ class Sample2_06_1_Dog {
 	
 	//---フィールド-------------------------------------
 	private static int    dogsNumber = 0 ; //犬の全頭数（初期値：0）
-	private static String breed ;          //犬種
+	private        String breed ;          //犬種
 	private        String name  ;          //名前
 	
 	//---コンストラクタ---------------------------------
 	Sample2_06_1_Dog(String br , String nm){
 		this.dogsNumber++ ;  //インスタンス化されるたびにdogsNumberの値を＋１する
-		this.breed = br ; //犬種はインスタンスごとに設定すべきだが、この変数はクラス変数になっているため、インスタンス化の度に上書きされてしまう。
+		this.breed = br ; //犬種はインスタンスごとに設定すべきだが、この変数がクラス変数になっている場合は、インスタンス化の度に上書きされてしまう。
 		this.name  = nm ;
 	}
 	
